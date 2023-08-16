@@ -23,13 +23,8 @@ const ViewListings: React.FC = () => {
     }, [])
 
     return (
-        <div
-            className="flex items-center justify-center h-screen dark:text-white"
-            style={{
-                height: 'calc(100vh - 68px - 81px)',
-            }}
-        >
-            <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-6 dark:text-white">
+        <div className="flex flex-col items-center justify-center px-6 md:mt-[80px] dark:text-white">
+            <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 dark:text-white">
                 {listings.map((listing) => (
                     <Link
                         className="border rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-800"
@@ -40,7 +35,7 @@ const ViewListings: React.FC = () => {
                             <img
                                 src={listing.imageUrl}
                                 alt={listing.title}
-                                className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
+                                className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300 max-w-full"
                             />
                             <div className="absolute bottom-0 bg-gradient-to-t from-black to-transparent p-4 w-full">
                                 <h2 className="text-xl font-bold text-white">
